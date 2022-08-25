@@ -4,33 +4,28 @@ from calculator_1 import add, sub, mul, div
 
 if __name__ == '__main__':
 
-    argc = len(argv) - 1
+    l_av = len(argv) - 1
 
-    if argc == 3:
+    if l_av == 3:
         operator = argv[2]
-        a = int(argv[1])
-        b = int(argv[3])
-
+        num_a = int(argv[1])
+        num_b = int(argv[3])
         if operator == '+':
-            result = add(a, b)
-            print('{:d} + {:d} = {:d}'.format(a, b, result))
+            res = add(num_a, num_b)
+            print('{:d} + {:d} = {:d}'.format(num_a, num_b, res))
             exit(0)
-
         elif operator == '-':
-            result = sub(a, b)
-            print('{:d} - {:d} = {:d}'.format(a, b, result))
+            res = sub(num_a, num_b)
+            print('{:d} - {:d} = {:d}'.format(num_a, num_b, res))
             exit(0)
-
         elif operator == '*':
-            result = mul(a, b)
-            print('{:d} * {:d} = {:d}'.format(a, b, result))
+            res = mul(num_a, num_b)
+            print('{:d} * {:d} = {:d}'.format(num_a, num_b, res))
             exit(0)
-
         elif operator == '/':
-            res = div(a, b)
-            print('{:d} / {:d} = {:d}'.format(a, b, result))
+            res = div(num_a, num_b)
+            print('{:d} / {:d} = {:d}'.format(num_a, num_b, res))
             exit(0)
-
         else:
             print('Unknown operator. Available operators: +, -, * and /')
             exit(1)
