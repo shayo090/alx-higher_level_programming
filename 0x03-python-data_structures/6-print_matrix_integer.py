@@ -2,9 +2,6 @@
 
 
 def print_matrix_integer(matrix=[[]]):
-    """
-    prints a matrix of integers to STDOUT
-    """
     for row in matrix:
         row_len = len(row)
         for i in range(row_len):
