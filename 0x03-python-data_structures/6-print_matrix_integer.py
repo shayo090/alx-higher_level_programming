@@ -2,10 +2,14 @@
 
 
 def print_matrix_integer(matrix=[[]]):
-    for row in marix:
-        for col in range(len(row)):
-            if col != len(row) - 1:
-                print("{:d}".format(row[col]), end=' ')
+    """
+    prints a matrix of integers to STDOUT
+    """
+    for row in matrix:
+        row_len = len(row)
+        for i in range(row_len):
+            if i != row_len - 1:
+                print("{:d}".format(row[i]), end=' ')
             else:
-                print("{:d}".format(row[col]), end='')
+                print("{:d}".format(row[i]), end='')
         print()
